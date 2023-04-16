@@ -19,24 +19,15 @@
 //  Note that:
 //  1- The text template is "my name is ** ** I am ** YO, and I love **."
 //  2- The first letters of the firstName and lastName should be capital letter
-const objat = (obj) => {
-    function capitalizeOnlyFirstLetter(string){
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
-
-    const firstName = capitalizeOnlyFirstLetter(obj.firstName)
-    const lastName = capitalizeOnlyFirstLetter(obj.lastName)
-    return `my name is ${firstName} ${lastName} I am ${obj.age} YO, and I love ${obj.hobby}`
+function capitalizeOnlyFirstLetter(string) {
+	return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-let obj = {
-    firstName: 'Ellie',
-    lastName: 'jon',
-    age: 67,
-    hobby: 'Gaming and Sleeping'
-}
-
-console.log(objat(obj));
+exports.objLat = (obj) => {
+	const firstName = capitalizeOnlyFirstLetter(obj.firstName);
+	const lastName = capitalizeOnlyFirstLetter(obj.lastName);
+	return `my name is ${firstName} ${lastName} I am ${obj.age} YO, and I love ${obj.hobby}.`;
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -98,45 +89,17 @@ console.log(objat(obj));
 //  1- Full name is first name + last name
 //  2- If one of the names is null don`t add it to the full name
 
-const cvFormatter = (arr) => {
-    return arr.filter(cv => cv.yearsOfExperience > 1).map(cv => {
-        const lastname = cv.lastName === null ? '' : cv.lastName
-        return{
-            fullname: `${cv.firstName} ${lastname}`.trim(),
-            tech: cv.tech
-        }
-    });
-}
-
-let cvs = [
-    {
-        firstName: "Jason",
-        lastName: "James",
-        yearsOfExperience: 20,
-        tech: "JS"
-    },
-    {
-        firstName: "Shira",
-        lastName: null,
-        yearsOfExperience: 5,
-        tech: ".Net"
-    },
-    {
-        firstName: "Dmitri",
-        lastName: "Akkerman",
-        yearsOfExperience: 1,
-        tech: "Python"
-    },
-    {
-        firstName: "Isabella",
-        lastName: null,
-        yearsOfExperience: 7,
-        tech: "Java"
-    }
-]
-
-const formattedCvs = cvFormatter(cvs);
-console.log(formattedCvs);
+exports.cvFormatter = (arr) => {
+	return arr
+		.filter((cv) => cv.yearsOfExperience > 1)
+		.map((cv) => {
+			const lastname = cv.lastName === null ? "" : cv.lastName;
+			return {
+				fullName: `${cv.firstName} ${lastname}`.trim(),
+				tech: cv.tech,
+			};
+		});
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
