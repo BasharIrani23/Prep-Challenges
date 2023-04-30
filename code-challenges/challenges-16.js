@@ -12,32 +12,20 @@
 // Output => "olleH";
 
 const reverseString = (string) => {
-  let reversedString = "";
+  let result = "";
   for (let i = string.length - 1; i >= 0; i--) {
-    reversedString += string[i];
+    result += string[i];
   }
-  return reversedString;
+  return result;
 };
-
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
 // Challenge 02:
 // Required:
 //
-// Write a function that takes an array of strings and returns only strings that contain ^_^.
-//
-// Ex :-
-// Input <= ["hello ^_^ ","Hi ^_^" ,"What's up ^_-" ,"lol"] , Output => ["hello ^_^ ","Hi ^_^" ] ;
-
-const filterEven = (arr) => {
-  const result = [];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 === 0) {
-      result.push(arr[i]);
-    }
-  }
-  return result;
+const detectFace = (arr) => {
+  return arr.filter((str) => str.indexOf("^_^") !== -1);
 };
 
 // -------------------------------------------------------------------------------------------------------
