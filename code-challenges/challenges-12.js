@@ -124,8 +124,6 @@ const vowelsFiltration = (arr) => {
 
 const skillComparison = (arr1, arr2) => {
   // write your code here
-
-  
 };
 // -------------------------------------------------------------------------------------------------------
 
