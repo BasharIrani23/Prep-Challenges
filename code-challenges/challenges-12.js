@@ -123,15 +123,9 @@ const vowelsFiltration = (arr) => {
 // - the 'include' method can help you, read about it.
 
 const skillComparison = (arr1, arr2) => {
-  const skillComparison = (arr1, arr2) => {
-    const diff1 = arr1.filter((skill) => !arr2.includes(skill));
-    const diff2 = arr2.filter((skill) => !arr1.includes(skill));
-    return [...diff1, ...diff2];
-  };
+  // write your code here
 };
 // -------------------------------------------------------------------------------------------------------
-
-
 
 module.exports = {
   oddFiltration,
