@@ -17,14 +17,14 @@
         {
             "language": "markdown",
             "source": [
-                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
             ],
             "outputs": []
         },
         {
             "language": "javascript",
             "source": [
-                "function equalizeArray(arr) {\n    const frequencyMap = new Map();\n  \n    // Count the frequency of each element\n    for (const num of arr) {\n      if (frequencyMap.has(num)) {\n        frequencyMap.set(num, frequencyMap.get(num) + 1);\n      } else {\n        frequencyMap.set(num, 1);\n      }\n    }\n  \n    // Find the maximum frequency\n    let maxFrequency = 0;\n    for (const frequency of frequencyMap.values()) {\n      if (frequency > maxFrequency) {\n        maxFrequency = frequency;\n      }\n    }\n  \n    // Return the difference between the array length and the maximum frequency\n    return arr.length - maxFrequency;\n  }\n  "
+                ""
             ],
             "outputs": []
         },
@@ -38,21 +38,21 @@
         {
             "language": "markdown",
             "source": [
-                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
             ],
             "outputs": []
         },
         {
             "language": "javascript",
             "source": [
-                "function howManyGames(p, d, m, s) {\n    let count = 0;\n  \n    while (s >= p) {\n      count++;\n      s -= p;\n      p = Math.max(p - d, m);\n    }\n  \n    return count;\n  }\n  "
+                ""
             ],
             "outputs": []
         },
         {
             "language": "markdown",
             "source": [
-                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
             ],
             "outputs": []
         },
