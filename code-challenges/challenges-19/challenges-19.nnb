@@ -24,7 +24,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function appendAndDelete(s, t, k) {\n    if (k >= s.length + t.length) {\n        return 'Yes';\n    }\n    \n    let commonLength = 0;\n    while (commonLength < s.length && commonLength < t.length && s[commonLength] === t[commonLength]) {\n        commonLength++;\n    }\n    \n    const deleteOperations = s.length - commonLength;\n    const appendOperations = t.length - commonLength;\n    const totalOperations = deleteOperations + appendOperations;\n    \n    if (totalOperations <= k && totalOperations % 2 === k % 2) {\n        return 'Yes';\n    } else {\n        return 'No';\n    }\n}\n"
             ],
             "outputs": []
         },
